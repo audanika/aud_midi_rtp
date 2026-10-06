@@ -1,0 +1,21 @@
+// @license
+// Copyright (c) Audanika
+//
+// Use of this source code is governed by terms that can be
+// found in the LICENSE file in the root of this package.
+
+{
+  "name": "aud_midi_rtp",
+  "summary": "RFC 6295 (RTP-MIDI) as Dart: payload format and the complete recovery journal, sender and receiver, codec only without sockets.",
+  "domain": [
+    "RTP-MIDI payload and recovery journal (RFC 6295)"
+  ],
+  "interfaces": {
+    "uses": {
+      "aud_midi_standard": "messages"
+    },
+    "usedBy": {
+      "aud_midi_network": "consumes this package"
+    }
+  }
+}
