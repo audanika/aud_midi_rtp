@@ -14,7 +14,16 @@ Teil der aud_midi-Familie, siehe [aud_midi](https://github.com/audanika/aud_midi
 
 ## Stand
 
-Nur Boilerplate. Die Implementierung folgt in späteren Tickets, siehe den Plan in [aud_midi_pm](https://github.com/audanika/aud_midi_pm/blob/main/doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md).
+Implementiert als Codec ohne Sockets und ohne `dart:io`:
+
+- RTP-Header, MIDI-Command-Section (B, J, Z, P, LEN), Delta Times, Running Status, SysEx-Segmentierung und -Abbruch
+- Vollständiges Recovery Journal: Channel-Chapter P, C, M, W, N, E, T, A, System-Chapter D, V, Q, F, X, Enhanced Chapter C
+- `MidiRtpSender`: Session-Historie, Checkpoints per Closed Loop (Standard), Open Loop und Anchor, S-Bits, Kürzen nach Feedback
+- `MidiRtpReceiver`: Sequenznummern, Checkpoint-Prüfung, Reparatur pro Chapter, Diagnosen und Zähler bei Verlust
+- `MidiRtpSessionConfig`: `fmtp`-Parameter nach Appendix C, AppleMIDI-Voreinstellung
+- `MidiRtpLossyChannel`: Verlust, Bursts, Umordnung und Duplikate für Tests
+
+Offen: Tests gegen Mitschnitte von Apples Treiber, zusammen mit `aud_midi_network`. Siehe den Plan in [aud_midi_pm](https://github.com/audanika/aud_midi_pm/blob/main/doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md).
 
 ## Installation
 
