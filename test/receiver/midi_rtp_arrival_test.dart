@@ -8,11 +8,11 @@ import 'package:aud_midi_rtp/aud_midi_rtp.dart';
 import 'package:test/test.dart';
 
 void main() {
-  group('Example', () {
-    group('greet()', () {
-      test('should greet the name', () {
-        expect(const Example('World').greet(), 'Hello World!');
-      });
+  group('MidiRtpArrival', () {
+    test('accepts first, next and after-loss packets', () {
+      expect([
+        for (final a in MidiRtpArrival.values) a.isAccepted,
+      ], equals([true, true, true, false, false]));
     });
   });
 }

@@ -12,10 +12,10 @@
   ],
   "interfaces": {
     "uses": {
-      "aud_midi_standard": "messages"
+      "aud_midi_standard": "MidiMessage, MidiByteEncoder/MidiByteParser, MidiTime, MidiTimedMessage, MidiIssueCallback, MidiNetworkLossStats"
     },
     "usedBy": {
-      "aud_midi_network": "consumes this package"
+      "aud_midi_network": "MidiRtpSender, MidiRtpReceiver, MidiRtpSessionConfig.appleMidi, MidiRtpPacket"
     }
   }
 }
