@@ -2,7 +2,7 @@
 
 RFC 6295 (RTP-MIDI) als Dart: Payload-Format und vollständiges Recovery Journal, Sender und Empfänger, nur Codec ohne Sockets.
 
-Teil der aud_midi-Familie, siehe [aud_midi](https://github.com/audanika/aud_midi).
+Teil der aud_midi-Familie, siehe [aud_midi](https://github.com/audmidi/aud_midi).
 
 ## Ziele
 
@@ -23,7 +23,7 @@ Implementiert als Codec ohne Sockets und ohne `dart:io`:
 - `MidiRtpSessionConfig`: `fmtp`-Parameter nach Appendix C, AppleMIDI-Voreinstellung
 - `MidiRtpLossyChannel`: Verlust, Bursts, Umordnung und Duplikate für Tests
 
-Offen: Tests gegen Mitschnitte von Apples Treiber, zusammen mit `aud_midi_network`. Siehe den Plan in [aud_midi_pm](https://github.com/audanika/aud_midi_pm/blob/main/doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md).
+Offen: Tests gegen Mitschnitte von Apples Treiber, zusammen mit `aud_midi_network`. Siehe den Plan in [aud_midi_pm](https://github.com/audmidi/aud_midi_pm/blob/main/doc/2026-Q4/tickets/2026-10-06-aud_midi_01-initial-midi-implementation.md).
 
 ## Installation
 

@@ -1,9 +1,8 @@
 name: aud_midi_rtp
 description: "RFC 6295 RTP-MIDI in Dart: payload format and complete recovery journal, no sockets"
 version: 0.0.0
-homepage: https://github.com/audanika/aud_midi_rtp
-repository: https://github.com/audanika/aud_midi_rtp
-publish_to: none
+homepage: https://github.com/audmidi/aud_midi_rtp
+repository: https://github.com/audmidi/aud_midi_rtp
 topics:
   - midi
   - audio
@@ -18,8 +17,4 @@ dev_dependencies:
   lints: ^6.1.0
   test: ^1.32.0
 dependencies:
-  aud_midi_standard:
-    git:
-      url: git@github.com:audanika/aud_midi_standard.git
-      tag_pattern: "{{version}}"
-    version: ^0.0.0
+  aud_midi_standard: ^0.0.0
