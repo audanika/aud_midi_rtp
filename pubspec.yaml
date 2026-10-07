@@ -1,6 +1,6 @@
 name: aud_midi_rtp
 description: "RFC 6295 RTP-MIDI in Dart: payload format and complete recovery journal, no sockets"
-version: 0.0.0
+version: 0.1.0
 homepage: https://github.com/audmidi/aud_midi_rtp
 repository: https://github.com/audmidi/aud_midi_rtp
 topics:
